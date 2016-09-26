@@ -1,0 +1,14 @@
+name = World Vision Campaign: Por una infancia sin problemas
+description = Provides functionality specific for the X1FSV campaign
+core = 7.x
+package = Features
+version = 7.x-1.0-beta1
+dependencies[] = page_manager
+dependencies[] = views
+dependencies[] = views_bootstrap
+features[ctools][] = page_manager:pages_default:1
+features[ctools][] = views:views_default:3.0
+features[features_api][] = api:2
+features[page_manager_pages][] = wv_x1fsv_page
+features[views_view][] = wv_x1fsv_donation_list
+features_exclude[dependencies][ctools] = ctools

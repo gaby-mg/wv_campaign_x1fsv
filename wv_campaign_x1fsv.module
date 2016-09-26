@@ -1,0 +1,7 @@
+<?php
+/**
+ * @file
+ * Code for the World Vision Campaign: Por una infancia sin problemas feature.
+ */
+
+include_once 'wv_campaign_x1fsv.features.inc';
