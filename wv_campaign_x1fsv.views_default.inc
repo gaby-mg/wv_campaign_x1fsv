@@ -38,7 +38,6 @@ function wv_campaign_x1fsv_views_default_views() {
   $handler->display->display_options['relationships']['field_wv_donation_reference_product_id']['id'] = 'field_wv_donation_reference_product_id';
   $handler->display->display_options['relationships']['field_wv_donation_reference_product_id']['table'] = 'field_data_field_wv_donation_reference';
   $handler->display->display_options['relationships']['field_wv_donation_reference_product_id']['field'] = 'field_wv_donation_reference_product_id';
-  $handler->display->display_options['relationships']['field_wv_donation_reference_product_id']['required'] = TRUE;
   /* Field: Content: Title */
   $handler->display->display_options['fields']['title']['id'] = 'title';
   $handler->display->display_options['fields']['title']['table'] = 'node';
