@@ -65,7 +65,7 @@ function wv_campaign_x1fsv_views_default_views() {
   $handler->display->display_options['fields']['add_to_cart_form']['default_quantity'] = '1';
   $handler->display->display_options['fields']['add_to_cart_form']['combine'] = 1;
   $handler->display->display_options['fields']['add_to_cart_form']['display_path'] = 0;
-  $handler->display->display_options['fields']['add_to_cart_form']['line_item_type'] = 0;
+  $handler->display->display_options['fields']['add_to_cart_form']['line_item_type'] = 'wv_donation';
   /* Sort criterion: Content: Nid */
   $handler->display->display_options['sorts']['nid']['id'] = 'nid';
   $handler->display->display_options['sorts']['nid']['table'] = 'node';
@@ -86,21 +86,16 @@ function wv_campaign_x1fsv_views_default_views() {
   $handler->display->display_options['filters']['type']['table'] = 'node';
   $handler->display->display_options['filters']['type']['field'] = 'type';
   $handler->display->display_options['filters']['type']['value'] = array(
+    'page' => 'page',
     'wv_donation_display' => 'wv_donation_display',
   );
   $handler->display->display_options['filters']['type']['group'] = 1;
   /* Filter criterion: Content: Title */
-  $handler->display->display_options['filters']['title']['id'] = 'title';
-  $handler->display->display_options['filters']['title']['table'] = 'node';
-  $handler->display->display_options['filters']['title']['field'] = 'title';
-  $handler->display->display_options['filters']['title']['value'] = 'Mutilación genital';
-  $handler->display->display_options['filters']['title']['group'] = 2;
-  /* Filter criterion: Content: Title */
-  $handler->display->display_options['filters']['title_1']['id'] = 'title_1';
-  $handler->display->display_options['filters']['title_1']['table'] = 'node';
-  $handler->display->display_options['filters']['title_1']['field'] = 'title';
-  $handler->display->display_options['filters']['title_1']['value'] = 'Niños refugiados';
-  $handler->display->display_options['filters']['title_1']['group'] = 2;
+  $handler->display->display_options['filters']['title_6']['id'] = 'title_6';
+  $handler->display->display_options['filters']['title_6']['table'] = 'node';
+  $handler->display->display_options['filters']['title_6']['field'] = 'title';
+  $handler->display->display_options['filters']['title_6']['value'] = 'La campaña';
+  $handler->display->display_options['filters']['title_6']['group'] = 2;
   /* Filter criterion: Content: Title */
   $handler->display->display_options['filters']['title_2']['id'] = 'title_2';
   $handler->display->display_options['filters']['title_2']['table'] = 'node';
@@ -108,23 +103,39 @@ function wv_campaign_x1fsv_views_default_views() {
   $handler->display->display_options['filters']['title_2']['value'] = 'Niños soldado';
   $handler->display->display_options['filters']['title_2']['group'] = 2;
   /* Filter criterion: Content: Title */
+  $handler->display->display_options['filters']['title_5']['id'] = 'title_5';
+  $handler->display->display_options['filters']['title_5']['table'] = 'node';
+  $handler->display->display_options['filters']['title_5']['field'] = 'title';
+  $handler->display->display_options['filters']['title_5']['value'] = 'Explotación sexual y tráfico';
+  $handler->display->display_options['filters']['title_5']['group'] = 2;
+  /* Filter criterion: Content: Title */
+  $handler->display->display_options['filters']['title']['id'] = 'title';
+  $handler->display->display_options['filters']['title']['table'] = 'node';
+  $handler->display->display_options['filters']['title']['field'] = 'title';
+  $handler->display->display_options['filters']['title']['value'] = 'Trabajo infantil';
+  $handler->display->display_options['filters']['title']['group'] = 2;
+  /* Filter criterion: Content: Title */
+  $handler->display->display_options['filters']['title_1']['id'] = 'title_1';
+  $handler->display->display_options['filters']['title_1']['table'] = 'node';
+  $handler->display->display_options['filters']['title_1']['field'] = 'title';
+  $handler->display->display_options['filters']['title_1']['value'] = 'Ablación y matrimonio temprano';
+  $handler->display->display_options['filters']['title_1']['group'] = 2;
+  /* Filter criterion: Content: Title */
   $handler->display->display_options['filters']['title_3']['id'] = 'title_3';
   $handler->display->display_options['filters']['title_3']['table'] = 'node';
   $handler->display->display_options['filters']['title_3']['field'] = 'title';
-  $handler->display->display_options['filters']['title_3']['value'] = 'Explotación infantil';
+  $handler->display->display_options['filters']['title_3']['value'] = 'Maltrato infantil';
   $handler->display->display_options['filters']['title_3']['group'] = 2;
+  $handler->display->display_options['filters']['title_3']['expose']['operator_id'] = 'title_3_op';
+  $handler->display->display_options['filters']['title_3']['expose']['label'] = 'Title';
+  $handler->display->display_options['filters']['title_3']['expose']['operator'] = 'title_3_op';
+  $handler->display->display_options['filters']['title_3']['expose']['identifier'] = 'title_3';
   /* Filter criterion: Content: Title */
   $handler->display->display_options['filters']['title_4']['id'] = 'title_4';
   $handler->display->display_options['filters']['title_4']['table'] = 'node';
   $handler->display->display_options['filters']['title_4']['field'] = 'title';
-  $handler->display->display_options['filters']['title_4']['value'] = 'Abuso infantil';
+  $handler->display->display_options['filters']['title_4']['value'] = 'Refugiados y menores no acompañados';
   $handler->display->display_options['filters']['title_4']['group'] = 2;
-  /* Filter criterion: Content: Title */
-  $handler->display->display_options['filters']['title_5']['id'] = 'title_5';
-  $handler->display->display_options['filters']['title_5']['table'] = 'node';
-  $handler->display->display_options['filters']['title_5']['field'] = 'title';
-  $handler->display->display_options['filters']['title_5']['value'] = 'Tráfico y abuso sexual';
-  $handler->display->display_options['filters']['title_5']['group'] = 2;
 
   /* Display: Block */
   $handler = $view->new_display('block', 'Block', 'block');
@@ -149,6 +160,7 @@ function wv_campaign_x1fsv_views_default_views() {
     t('Asc'),
     t('Desc'),
     t('Products referenced by field_wv_donation_reference'),
+    t('Title'),
     t('Block'),
   );
   $export['wv_x1fsv_donation_list'] = $view;
