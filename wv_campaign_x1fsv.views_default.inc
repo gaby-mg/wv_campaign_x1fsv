@@ -43,10 +43,23 @@ function wv_campaign_x1fsv_views_default_views() {
   $handler->display->display_options['fields']['title']['table'] = 'node';
   $handler->display->display_options['fields']['title']['field'] = 'title';
   $handler->display->display_options['fields']['title']['label'] = '';
+  $handler->display->display_options['fields']['title']['exclude'] = TRUE;
   $handler->display->display_options['fields']['title']['alter']['word_boundary'] = FALSE;
   $handler->display->display_options['fields']['title']['alter']['ellipsis'] = FALSE;
   $handler->display->display_options['fields']['title']['element_label_colon'] = FALSE;
   $handler->display->display_options['fields']['title']['link_to_node'] = FALSE;
+  /* Field: Field: Imagen destacada */
+  $handler->display->display_options['fields']['field_imagen_destacada']['id'] = 'field_imagen_destacada';
+  $handler->display->display_options['fields']['field_imagen_destacada']['table'] = 'field_data_field_imagen_destacada';
+  $handler->display->display_options['fields']['field_imagen_destacada']['field'] = 'field_imagen_destacada';
+  $handler->display->display_options['fields']['field_imagen_destacada']['relationship'] = 'field_wv_donation_reference_product_id';
+  $handler->display->display_options['fields']['field_imagen_destacada']['label'] = '';
+  $handler->display->display_options['fields']['field_imagen_destacada']['element_label_colon'] = FALSE;
+  $handler->display->display_options['fields']['field_imagen_destacada']['click_sort_column'] = 'fid';
+  $handler->display->display_options['fields']['field_imagen_destacada']['type'] = 'file_rendered';
+  $handler->display->display_options['fields']['field_imagen_destacada']['settings'] = array(
+    'file_view_mode' => 'default',
+  );
   /* Field: Content: Body */
   $handler->display->display_options['fields']['body']['id'] = 'body';
   $handler->display->display_options['fields']['body']['table'] = 'field_data_body';
