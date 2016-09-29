@@ -57,7 +57,7 @@ function wv_campaign_x1fsv_default_page_manager_pages() {
     ),
   );
   $display->cache = array();
-  $display->title = 'Acaba con la violencia infantil';
+  $display->title = 'Por una infancia sin violencia';
   $display->uuid = '4668f08b-9bae-4de0-930e-2e074f586b78';
   $display->content = array();
   $display->panels = array();
