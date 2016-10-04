@@ -98,7 +98,6 @@ function wv_campaign_x1fsv_views_default_views() {
   $handler->display->display_options['filters']['type']['table'] = 'node';
   $handler->display->display_options['filters']['type']['field'] = 'type';
   $handler->display->display_options['filters']['type']['value'] = array(
-    'page' => 'page',
     'wv_donation_display' => 'wv_donation_display',
   );
   $handler->display->display_options['filters']['type']['group'] = 1;
@@ -106,7 +105,7 @@ function wv_campaign_x1fsv_views_default_views() {
   $handler->display->display_options['filters']['title_6']['id'] = 'title_6';
   $handler->display->display_options['filters']['title_6']['table'] = 'node';
   $handler->display->display_options['filters']['title_6']['field'] = 'title';
-  $handler->display->display_options['filters']['title_6']['value'] = 'La campaña';
+  $handler->display->display_options['filters']['title_6']['value'] = 'Por una infancia sin violencia';
   $handler->display->display_options['filters']['title_6']['group'] = 2;
   /* Filter criterion: Content: Title */
   $handler->display->display_options['filters']['title_2']['id'] = 'title_2';
